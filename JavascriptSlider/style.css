@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: unset;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d1d1d1;
+}
+
+.slider {
+    height: 60%;
+    width: 80%;
+    background-color: white;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#left-arrow {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top:47%;
+    clip-path: polygon(0 50%, 60% 0, 60% 20%, 100% 20%, 100% 80%, 60% 80%, 60% 100%);
+    background-color: white;
+    cursor: pointer;
+}
+#right-arrow {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top:47%;
+    right: 0px;
+    clip-path: polygon(40% 0%, 100% 50%, 40% 100%, 40% 80%, 0% 80%, 0% 20%, 40% 20%);
+    background-color: white;
+    cursor: pointer;
+}
+
+.first {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    display: none;
+}
+.second {
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    display: none;
+}
+.third {
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+
+.click {
+    animation: slide 2s linear forwards;
+}
+@keyframes slide {
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 50%;
+    }
+    100% {
+        width: 0;
+    }
+}
